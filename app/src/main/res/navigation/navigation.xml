@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="eu.petrfaruzel.templateapp.ui.basic.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/nav_main_to_nav_other"
+            app:destination="@id/nav_other"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_other"
+        android:name="eu.petrfaruzel.templateapp.ui.basic.OtherFragment"
+        android:label="Other"
+        tools:layout="@layout/fragment_other">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="eu.petrfaruzel.templateapp.ui.basic.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+
+
+</navigation>

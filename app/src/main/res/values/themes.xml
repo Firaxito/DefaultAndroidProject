@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base abstract application theme. -->
+    <style name="ParentTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Force for xiaomi phones -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorSecondary">?attr/colorSecondary</item>
+    </style>
+
+    <!-- Default app theme -->
+    <style name="PrimaryTheme" parent="ParentTheme">
+        <item name="colorPrimary">@color/colorPrimaryThemePrimary</item>
+        <item name="colorSecondary">@color/colorPrimaryThemeSecondary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimaryThemePrimary</item>
+
+    </style>
+
+    <style name="SecondaryTheme" parent="ParentTheme">
+        <item name="colorPrimary">@color/colorPrimaryThemeSecondary</item>
+        <item name="colorSecondary">@color/colorPrimaryThemePrimary</item>
+    </style>
+
+
+    <!-- Theme for toolbar -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- Theme for material button -->
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="colorPrimary">@color/colorAntiTheme</item>
+    </style>
+
+</resources>
